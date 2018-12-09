@@ -7,3 +7,7 @@ layout: default
 {% for post in site.posts %}
   <li><a style="{% if page.url == post.url %}color:red{% endif %}" href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
+
+{% for person in site.data.people %}
+  {{ person.name }}, {{ person.field }} <br>
+{% endfor %}
