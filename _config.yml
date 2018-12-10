@@ -31,8 +31,11 @@ theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
 
-#defaults:
-#  -
+defaults:
+  - scope:
+      path: assets/img
+    values:
+        image: true
 #    scope:
 #      path: ""
 #      type: post
