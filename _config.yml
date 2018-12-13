@@ -17,7 +17,7 @@ title: Project Echo
 email: didac.fernandezcadenas@epfl.ch
 description: >- # this means to ignore newlines until "baseurl:"
   An exploratory study on the echo chamber effect, using all
-  posts on Reddit from January 2016 through March 2017.
+  posts on Reddit from 2016.
   Project for the Applied Data Analysis course (CS-401) at EPFL.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
