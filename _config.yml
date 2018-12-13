@@ -27,7 +27,7 @@ github_username:  VashMKS
 # Build settings
 repository: project-echo-chamber/project-echo-chamber.github.io
 markdown: kramdown
-theme: jekyll-theme-cayman
+theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
 
