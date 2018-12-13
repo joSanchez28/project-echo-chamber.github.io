@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  First Post
+title:  Example Post
 date:   2018-12-09 20:00:09 +0100
 categories: jekyll test
 ---
