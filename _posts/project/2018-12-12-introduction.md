@@ -5,6 +5,10 @@ date:   2018-12-12 00:00:00 +0100
 categories: project
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent laoreet sagittis mauris, quis gravida massa facilisis et. Cras eget sagittis tellus, eu pellentesque nunc. Suspendisse condimentum nisl non lacus commodo finibus. Nullam eleifend hendrerit quam, ut ornare erat ullamcorper eu. Aliquam eu quam tincidunt, accumsan lectus a, semper ante. Phasellus sapien magna, laoreet vel mauris vitae, fringilla pharetra leo. Curabitur molestie, metus a posuere pharetra, tortor magna dictum massa, id porttitor felis lacus et nibh. Suspendisse lacinia vehicula ligula at tincidunt. Nulla placerat interdum ullamcorper. Suspendisse suscipit gravida varius. Integer interdum consequat enim sed tempor.
+<p align=justify>
+Has the high connectivity that came with the internet made us better? Is it fostering healthy discussion and debate between the different communities or is the amount of information available distracting us from the real issues of our society? Which sources are reliable? Who to trust? If we form an opinion, was it really our own or were we influenced by someone with an agenda? Do this things even happen or is this all just tin-foil hat speculation?
+</p>
 
-Ut condimentum commodo arcu in tristique. Nam imperdiet eu velit sit amet rhoncus. Cras odio neque, auctor non egestas vitae, gravida ac sapien. Aenean mattis magna in tempus lacinia. Proin molestie eget turpis id hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec ut eros vel ante vulputate eleifend. Vestibulum ultrices turpis ut risus dignissim mollis. Maecenas nec libero nisl. In finibus ex sit amet condimentum convallis. Maecenas vestibulum massa quis massa egestas, eget elementum nibh pulvinar. Phasellus ultricies eget lacus a laoreet. Aliquam blandit tincidunt justo a vehicula. Sed porttitor, nisl vel efficitur aliquet, nisl elit condimentum mauris, ut porttitor enim erat maximus massa. Praesent lobortis urna sit amet erat molestie, sit amet lacinia ligula ullamcorper.
+<p align=justify>
+Questions like this arise in our day-to-day interactions with modern social media but answering them requires a tremendous amount of effort due to the sheer amount of data at our fingertips. To have a good picture of how a particular technology (the internet no less) is shaping debate we to understand how information spreads.
+</p>
