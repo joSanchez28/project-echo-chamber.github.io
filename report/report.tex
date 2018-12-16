@@ -76,17 +76,13 @@ Dídac Fernández Cadenas\\
 
 We call a community an echo chamber when a group that shows built-in biases, traits, opinions, etc. (so any group) interacts relatively only within itself, self-reinforcing those opinions and biases.
 
-Echo chambers are constituted by a mix of homophily (similar individuals are brought together) and influence (they influence each other, reinforcing those traits they share). 
-
-The ease of access of the internet makes homophily effortless, a user only needs to perform a single Google query to find a community of like-minded individuals. Furthermore, it is easy to filter out content we don't agree with or that we just don't want to see. This creates a self-sorting effect in online communities.
-
-The structured nature of mass social media makes influence powerful and exploitable. It is much easier for some individuals (the influencers, high degree nodes of the network) to spread their opinions, and communities will form around them and their ideologies. Likewise, it is (many orders of magnitude) easier than ever to gather mass data about social interaction to monitor or artificially influence those communities.
+Echo chambers are constituted by a mix of homophily (similar individuals are brought together) and influence (they influence each other, reinforcing those traits they share). The ease of access of the internet makes homophily effortless, a user is a single Google query away from a community of like-minded individuals. Furthermore, it is easy to filter out content we don't want to see. This creates a self-sorting effect in online communities. The structured nature of mass social media makes influence powerful and exploitable. It is much easier for some individuals (the influencers, high degree nodes of the network) to spread their opinions, and communities will form around them and their ideologies. Likewise, it is (many orders of magnitude) easier than ever to gather mass data about social interaction to monitor or artificially influence those communities.
 
 \subsection{Reddit}
 
-There are two main components to the Reddit structure: the communities or \textbf{subreddits} and the \textbf{voting system} (or karma system).
+There are two main components to the Reddit structure: the communities or \textbf{subreddits} and the \textbf{voting or karma system}.
 
-There is no recommender system. People vote on what is relevant so if a majority are wrong, biased, or someone with the means gets enough people to believe something, then that something becomes the relevant discussion topic. The karma system is both the greatest advantage and the single point of failure of Reddit.
+There is no recommender system. People vote on what is relevant so if a majority are wrong or biased, then that something becomes the relevant discussion topic. The karma system is both the greatest advantage and the single point of failure of Reddit.
 
 \subsection{The Dataset}
 
@@ -114,22 +110,30 @@ As additional datapoints we extracted small samples from certain subreddits dedi
 The first part of the project consists in observing the behaviour of the network and how communities interact. We will look at our politics-themed subreddits and their interactions.
 
 \subsection{Visualizing the Network}
-We take subreddits as nodes and build a weighted adjacency matrix with the number of users that cross-post between two subreddits as the weight. In this state it is still hard to interpret anything since the edges are bidirectional and the weights are heavily biased by the size of each node, as we can see in fig. \ref{base_net} (Fig. \ref{base_net_big} in the appendix for bigger size).
+We take subreddits as nodes and build a weighted adjacency matrix with the number of users that cross-post between two subreddits as the weight. In this model we can see the amount of people shared by two communities and how the biggest communities end up being more central, which is to say that the more users a community has the more connected it is with other communities, which makes sense. Yet it is still hard to interpret since the edges are bidirectional and the weights are heavily biased by the size of each node, as we can see in fig. \ref{base_net} (Fig. \ref{base_net_big} in the appendix for a better look).
 
 \begin{figure}[h]
 	\includegraphics[width=\columnwidth]{img/base_network.png}
 	\caption{\label{base_net} Base network model}
 \end{figure}
+
+In this case, r/politics is very central to the network of political subreddits as it's normal, being one of the oldest and better known subs. What is more surprising is the amount of activity in r/The\_Donald, which launched in June 2015 and grew to be one of the biggest communities in the whole platform.
  
 \subsection{Fine-tuning the Network}
-To look at how subreddit A interacts with subreddit B we would like a one-sided measure of interaction. With this in mind we assign a "main" subreddit to each user, add up all karma that each user has in each subreddit, and the one with the highest score will be it's home sub. This represents the fact that this community aligns with the user and viceversa.
+The first problem with fig. \ref{base_net} is that edge size is heavily correlated with the size of the nodes, polluting our precious insight. To correct for that, we instead look at the percentage of sub A users that commented on sub B. 
 
-The second problem with fig. \ref{base_net} is that edge size is heavily correlated with the size of the nodes, polluting our precious insight. To correct for that, we instead look at the percentage of sub A users that commented on sub B. The result, in fig. \ref{karma_net} (Fig. \ref{karma_net_big} in the appendix).
+Secondly, to look at how subreddit A interacts with subreddit B we would like a one-sided measure of interaction. With this in mind we assign a "main" subreddit to each user: add up all karma that each user has in each subreddit, and the one with the highest score will be it's home sub. This represents the fact that this user aligns with the community and viceversa.
+
+The result, in fig. \ref{karma_net} (Fig. \ref{karma_net_big} in the appendix).
 
 \begin{figure}[h]
 	\includegraphics[width=\columnwidth]{img/karma_model.png}
 	\caption{\label{karma_net} Karma model in political subs}
 \end{figure}
+
+We can see now that edges both stemming and going into from r/The\_Donald are seemingly small relative to the others. From this we read that r/The\_Donald presents a deeper echo chamber structure. Even when being the second biggest community, it's interaction with others is on the lower end. On the other hand, r/politics receives visitors from seemingly everywhere.
+
+Another takeaway is that small communities have more users going out than the bigger ones. If one's main community is small, it is still likely to visit the larger, more popular ones and thus have a more diverse exposure to different views.
 
 \subsection{Political Ideologies in Isolation}
 
